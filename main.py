@@ -20,6 +20,14 @@ def main():
         if scelta == "1":
             nuovo_nome = input("Inserisci il nuovo nome del centro fieristico: ")
             # TODO: Aggiorna il nome del centro fieristico
+            #controllo che nuovo_nome contenga del testo e che non sia vuoto
+            if nuovo_nome:
+                #se il nome è valido chiama il metodo set_nome per sovrascrivere il vecchio nome
+                #con quello nuovo inserito dall'utente
+                lingotto.set_nome(nuovo_nome)
+                print(f'Nome aggiornato con successo: {nuovo_nome}')
+            else:
+                print("Il nome non può essere trovato!")
 
         elif scelta == "2":
             file_path = "dati_lingotto.csv"
